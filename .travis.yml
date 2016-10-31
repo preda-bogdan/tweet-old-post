@@ -18,8 +18,6 @@ matrix:
     # Current $required_php_version for WordPress: 5.2.4
     # aliased to 5.2.17
     - php: 5.2
-    # aliased to a recent hhvm version
-    - php: hhvm
     # aliased to a recent nightly version
     - php: nightly
   allow_failures:
