@@ -1,5 +1,10 @@
 ﻿# Revive Old Post (Former Tweet Old Post)
 -----------------------------------------
+
+[![Build Status](https://travis-ci.org/preda-bogdan/tweet-old-post.svg?branch=production)](https://travis-ci.org/preda-bogdan/tweet-old-post)
+[![Code Climate](https://codeclimate.com/github/preda-bogdan/tweet-old-post/badges/gpa.svg)](https://codeclimate.com/github/preda-bogdan/tweet-old-post)
+[![Issue Count](https://codeclimate.com/github/preda-bogdan/tweet-old-post/badges/issue_count.svg)](https://codeclimate.com/github/preda-bogdan/tweet-old-post)
+
 Contributors: codeinwp,marius2012,marius_codeinwp,hardeepasrani,Madalin_Themeisle, rsocial
 Tags:twitter, facebook, linkedin, automatic, tweet, share, wordpress, marketing, sharing, Tweet old post, Tweets,evergreen
 Requires at least: 2.7
