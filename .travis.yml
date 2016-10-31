@@ -49,14 +49,18 @@ before_install:
   - phpcs --config-set installed_paths /tmp/wordpress/wordpress-coding-standards
   - phpenv rehash
 
-#install: composer install --no-dev
+install: composer require codeclimate/php-test-reporter --dev
 
 addons:
     code_climate:
         repo_token: 346c48bdeeb6c06574ceea22560b431121c13119d4e9748256ed43f2b0b422dd
 
 script:
-  - phpunit
+  #- phpunit
+  - phpunit --coverage-clover build/logs/clover.xml
+
+after_script:
+  - vendor/bin/test-reporter
 
 notifications:
   on_success: never
