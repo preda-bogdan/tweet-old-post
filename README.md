@@ -1,5 +1,5 @@
 ﻿# Revive Old Post (Former Tweet Old Post)
-=========================================
+-----------------------------------------
 Contributors: codeinwp,marius2012,marius_codeinwp,hardeepasrani,Madalin_Themeisle, rsocial
 Tags:twitter, facebook, linkedin, automatic, tweet, share, wordpress, marketing, sharing, Tweet old post, Tweets,evergreen
 Requires at least: 2.7
@@ -10,7 +10,7 @@ Stable tag: trunk
 Plugin to share about your old posts on twitter, facebook, linkedin to get more hits for them and keep them alive.
 
 ## Description
-================
+-----------------
 
 ### What the plugin can do ?
 
