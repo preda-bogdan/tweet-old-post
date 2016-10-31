@@ -25,5 +25,5 @@ before_script:
 
 script:
   #- phpunit
-  - phpcs --standard=WordPress ./**/*.php
+  #- phpcs --standard=WordPress ./**/*.php
   - cd wp-tests/spec && bundle exec rspec test.rb
