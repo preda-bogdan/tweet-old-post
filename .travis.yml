@@ -25,8 +25,8 @@ matrix:
   allow_failures:
     - php: nightly
 
-  env:
-    - WP_VERSION=master WP_MULTISITE=0
+env:
+  - WP_VERSION=master WP_MULTISITE=0
 
 # Use this to prepare the system to install prerequisites or dependencies.
 # e.g. sudo apt-get update.
@@ -35,7 +35,7 @@ before_install:
   # Setup WP_TESTS_DIR (needed to bootstrap WP PHPUnit tests).
   - export WP_TESTS_DIR=/tmp/wordpress/tests/phpunit/
   # Clone the WordPress develop repo.
-  - git clone --depth=1 --branch=$WP_VERSION git://develop.git.wordpress.org/ /tmp/wordpress/
+  - git clone --depth=1 --branch="$WP_VERSION" git://develop.git.wordpress.org/ /tmp/wordpress/
   # Setup DB.
   - mysql -e "CREATE DATABASE wordpress_test;" -uroot
   # Setup wp-config.
