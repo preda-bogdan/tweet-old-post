@@ -51,6 +51,10 @@ before_install:
 
 #install: composer install --no-dev
 
+addons:
+    code_climate:
+        repo_token: 346c48bdeeb6c06574ceea22560b431121c13119d4e9748256ed43f2b0b422dd
+
 script:
   - phpunit
 
