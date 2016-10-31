@@ -1,0 +1,32 @@
+{
+  "name"       : "codeinwp/tweet-old-post",
+  "description": "Plugin to share about your old posts on twitter, facebook, linkedin to get more hits for them and keep them alive.",
+  "keywords"   : ["wordpress"],
+  "type"       : "wordpress-plugin",
+  "homepage"   : "https://github.com/codeinwp/tweet-old-post",
+  "license"    : "GPL-2.0+",
+  "authors"    : [
+    {
+      "name"    : "Codeinwp",
+      "homepage": "http://themeisle.com",
+      "role"    : "Developer"
+    },
+    {
+      "name"    : "Contributors",
+      "homepage": "https://github.com/codeinwp/tweet-old-post/graphs/contributors"
+    }
+  ],
+  "support"    : {
+    "issues": "https://github.com/codeinwp/tweet-old-post/issues"
+  },
+  "require"    : {
+    "php"                      : ">=5.4",
+    "composer/installers"      : "~1.0",
+    "phpdocumentor/reflection" : "~1.0",
+    "erusev/parsedown"         : "~1.1",
+    "scribu/lib-posts-to-posts": "dev-master@dev",
+    "scribu/scb-framework"     : "dev-master@dev",
+    "psr/log"                  : "~1.0"
+  },
+  "autoload"   : {}
+}
