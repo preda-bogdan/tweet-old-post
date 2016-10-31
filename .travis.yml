@@ -25,6 +25,9 @@ matrix:
   allow_failures:
     - php: nightly
 
+  env:
+    - WP_VERSION=master WP_MULTISITE=0
+
 # Use this to prepare the system to install prerequisites or dependencies.
 # e.g. sudo apt-get update.
 # Failures in this section will result in build status 'errored'.
@@ -32,7 +35,7 @@ before_install:
   # Setup WP_TESTS_DIR (needed to bootstrap WP PHPUnit tests).
   - export WP_TESTS_DIR=/tmp/wordpress/tests/phpunit/
   # Clone the WordPress develop repo.
-  - git clone --depth=1 --branch="4.3" git://develop.git.wordpress.org/ /tmp/wordpress/
+  - git clone --depth=1 --branch="$WP_VERSION" git://develop.git.wordpress.org/ /tmp/wordpress/
   # Setup DB.
   - mysql -e "CREATE DATABASE wordpress_test;" -uroot
   # Setup wp-config.
@@ -40,6 +43,13 @@ before_install:
   - sed -i "s/youremptytestdbnamehere/wordpress_test/" /tmp/wordpress/wp-tests-config.php
   - sed -i "s/yourusernamehere/root/" /tmp/wordpress/wp-tests-config.php
   - sed -i "s/yourpasswordhere//" /tmp/wordpress/wp-tests-config.php
+
+  ## install PHPCS and Wordpress standards
+  - pear install pear/PHP_CodeSniffer
+  - mkdir wordpress-coding-standards && curl -L https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/archive/master.tar.gz | tar xz --strip-components=1 -C wordpress-coding-standards
+  - phpenv rehash
+  - phpcs --config-set installed_paths /tmp/wordpress/wordpress-coding-standards
+  - phpenv rehash
 
 #install: composer install --no-dev
 
